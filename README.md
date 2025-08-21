@@ -1,4 +1,4 @@
-# Repaso Obejtos I :point_up: Prerrequisitos
+# Repaso Obejtos I ☝️ Prerrequisitos
 
 Vamos a repasar todo lo que aprendimos y para esto vamos a resolver este ejercicio que tomamos en una fecha de Final de Objetos I. Pero lo vamos a resolver en la tecnología que vamos a usar en Obejtos II, sí, **_Java_**!!!
 
