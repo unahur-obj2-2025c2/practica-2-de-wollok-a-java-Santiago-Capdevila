@@ -26,4 +26,8 @@ public class Sensor {
     public Integer eficiencia() {
         return conMejoras ? capacidad * 2 : capacidad;
     }
+
+    public Boolean esDuradero() {
+        return durabilidad > capacidad * 2;
+    }
 }

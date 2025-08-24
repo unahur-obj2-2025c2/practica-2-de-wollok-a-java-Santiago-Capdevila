@@ -10,11 +10,15 @@ public class DronComercial extends Dron{
 
     public DronComercial(Integer autonomia, Integer procesamiento) {
         super(autonomia, procesamiento);
-
     }
     
     @Override
     public Boolean esAvanzadoSegunTipo() {
         return Boolean.FALSE;
+    }
+
+    @Override
+    public Integer eficienciaOperativa() {
+        return super.eficienciaOperativa() + 15;
     }
 }

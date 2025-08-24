@@ -7,15 +7,14 @@ public abstract class Dron {
     private final Integer procesamiento;
     private Mision mision;
 
-    public Dron(Integer autonomia, Integer procesamiento) {
+    public Dron(Integer autonomia, Integer procesamiento, Mision mision) {
         this.autonomia = autonomia;
         this.procesamiento = procesamiento;
     }
 
-    public Dron(Integer autonomia, Integer procesamiento, Mision mision) {
+    public Dron(Integer autonomia, Integer procesamiento) {
         this.autonomia = autonomia;
         this.procesamiento = procesamiento;
-        this.mision = mision;
     }
 
     public Mision getMision() {
@@ -38,9 +37,17 @@ public abstract class Dron {
         this.autonomia = autonomia;
     }
 
+    public Boolean esAvanzado() {
+        return this.esAvanzadoSegunTipo() || this.getMision().esAvanzadoSegunMision(this);
+    }
+
     protected abstract Boolean esAvanzadoSegunTipo();
 
     public Integer eficienciaOperativa() {
         return mision.eficienciaOperativa() + autonomia * 10;
+    }
+
+    public void disminuirAutonomía() {
+        autonomia = Integer.max(0, autonomia - 2);
     }
 }

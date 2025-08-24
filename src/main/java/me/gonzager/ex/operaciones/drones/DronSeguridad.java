@@ -13,7 +13,7 @@ public class DronSeguridad extends Dron {
     }
 
     @Override
-    protected Boolean esAvanzadoSegunTipo() {
+    public Boolean esAvanzadoSegunTipo() {
         return this.getProcesamiento() > 50; 
     }
 
